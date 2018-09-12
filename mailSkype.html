@@ -113,6 +113,17 @@
 
   //window.scrollY  refers to the pixels that get scrolled Y dimension
 
+  const sgMail = require('@sendgrid/mail');
+  sgMail.setApiKey('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');
+  const msg = {
+    to: 'tianyuduan1991@gmail.com',
+    from: 'test@example.com',
+    subject: 'Sending with SendGrid is Fun',
+    text: 'and easy to do anywhere, even with Node.js',
+    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+  };
+  sgMail.send(msg);
+
   function fixNav(){
     console.log(topofNav, window.scrollY);
     if (window.scrollY >= topofNav) {
