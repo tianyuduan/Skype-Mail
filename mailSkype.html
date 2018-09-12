@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skype Schedule</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <header>
+    <h1>Tianyu Duan is really Asian</h1>
+  </header>
+
+  <nav id="main">
+    <ul>
+      <li class="logo"><a href="#">LOST.</a></li>
+      <li><a href="#">Sunday</a></li>
+      <li><a href="#">Monday</a></li>
+      <li><a href="#">Tuesday</a></li>
+      <li><a href="#">Wednesday</a></li>
+      <li><a href="#">Thursday</a></li>
+      <li><a href="#">Friday</a></li>
+      <li><a href="#">Saturday</a></li>
+    </ul>
+  </nav>
+
+  <div class="site-wrap">
+
+    <table class='in-line-table'>
+            <tr >
+              <td colspan="4" class='day-block'>
+                <div > Sunday </div>
+                <br></br >
+                <div> Skype Time</div>
+                <div> TBA</div>
+
+                <br></br >
+                <div> Submit Changes</div>
+                 <input type="text" name="displayOutputS" id="displayOutputS" >
+              </td>
+
+              <td colspan="4" class='day-block'>
+                <div > Monday </div>
+                <br></br >
+                <div> Skype Time</div>
+                <div> 10:30 PM NY</div>
+
+                <br></br >
+                <div> Submit Changes</div>
+                 <input type="text" name="displayOutputS" id="displayOutputS" >
+              </td>
+              <td colspan="4" class='day-block'>
+                <div> Tuesday</div>
+                <br></br >
+                <div> Skype Time</div>
+                <div> 10:30 PM NY</div>
+
+                <br></br >
+                <div> Submit Changes</div>
+                 <input type="text" name="displayOutputS" id="displayOutputS" >
+              </td>
+              <td colspan="4" class='day-block'>
+                <div> Wednesday </div>
+                <br></br >
+                <div> Skype Time</div>
+                <div> 3:00 PM NY</div>
+
+                <br></br >
+                <div> Submit Changes</div>
+                 <input type="text" name="displayOutputS" id="displayOutputS" >
+              </td>
+              <td colspan="4" class='day-block'>
+                <div> Thursday </div>
+                <br></br >
+                <div> Skype Time</div>
+                <div> 8:30 PM NY</div>
+
+                <br></br >
+                <div> Submit Changes</div>
+                 <input type="text" name="displayOutputS" id="displayOutputS" >
+              </td>
+              <td colspan="4" class='day-block'>
+                <div> Friday </div>
+                <br></br >
+                <div> Skype Time</div>
+                <div> 9:00 PM NY</div>
+
+                <br></br >
+                <div> Submit Changes</div>
+                 <input type="text" name="displayOutputS" id="displayOutputS" >
+              </td>
+              <td colspan="4" class='day-block'>
+                <div> Saturday </div>
+                <br></br >
+                <div> Skype Time</div>
+                <div> TBA</div>
+
+                <br></br >
+                <div> Submit Changes</div>
+                 <input type="text" name="displayOutputS" id="displayOutputS" >
+              </td>
+            </tr>
+         </table>
+
+         <input type="button" name="doit" value="Submit"></input>
+  </div>
+<script>
+
+  const nav = document.querySelector('#main');
+  let topofNav = nav.offsetTop;
+  //top of nav gets the number of pixels to the top of
+
+  //window.scrollY  refers to the pixels that get scrolled Y dimension
+
+  function fixNav(){
+    console.log(topofNav, window.scrollY);
+    if (window.scrollY >= topofNav) {
+      // console.log('hello');
+      document.body.style.paddingTop = nav.offsetHeight + 'px';
+      document.body.classList.add('fixed-nav');
+    }
+    else {
+      document.body.classList.remove('fixed-nav');
+      document.body.style.paddingTop = 0;
+    }
+  }
+
+  window.addEventListener('scroll', fixNav);
+
+</script>
+
+</body>
+</html>
