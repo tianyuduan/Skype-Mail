@@ -107,12 +107,6 @@
   </div>
 <script>
 
-  const nav = document.querySelector('#main');
-  let topofNav = nav.offsetTop;
-  //top of nav gets the number of pixels to the top of
-
-  //window.scrollY  refers to the pixels that get scrolled Y dimension
-
   const sgMail = require('@sendgrid/mail');
   sgMail.setApiKey('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');
   const msg = {
@@ -124,6 +118,12 @@
   };
   sgMail.send(msg);
 
+
+  const nav = document.querySelector('#main');
+  let topofNav = nav.offsetTop;
+  //top of nav gets the number of pixels to the top of
+
+  //window.scrollY  refers to the pixels that get scrolled Y dimension
   function fixNav(){
     console.log(topofNav, window.scrollY);
     if (window.scrollY >= topofNav) {
