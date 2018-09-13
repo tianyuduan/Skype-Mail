@@ -105,19 +105,8 @@
 
          <input type="button" name="doit" value="Submit"></input>
   </div>
+  <script type="module" src="sendgrid.js"></script>
 <script>
-
-  const sgMail = require('@sendgrid/mail');
-  sgMail.setApiKey('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');
-  const msg = {
-    to: 'tianyuduan1991@gmail.com',
-    from: 'test@example.com',
-    subject: 'Sending with SendGrid is Fun',
-    text: 'and easy to do anywhere, even with Node.js',
-    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-  };
-  sgMail.send(msg);
-
 
   const nav = document.querySelector('#main');
   let topofNav = nav.offsetTop;
