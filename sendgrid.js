@@ -1,4 +1,3 @@
-<script type="text/javascript">
       // Client ID and API key from the Developer Console
       var CLIENT_ID = '974457871245-2a3459ftt3dipie2bgrcfspskbr73r42.apps.googleusercontent.com';
       var API_KEY = 'AIzaSyC9Z5Ejx6vbef1JPjsFeCGAi0Gs-2edzDw';
@@ -113,10 +112,3 @@
           }
         });
       }
-
-    </script>
-
-    <script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
